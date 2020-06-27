@@ -1,4 +1,4 @@
-# Azure Function Extension
+# Azure Function Extensions
 
 This is a personal repo where I will be developing additional bindings/triggers to plug into my azure functions. Feel free to contribute if you have any ideas for custom binding and or triggers that would enhance the functionality of Azure Functionas.
 
