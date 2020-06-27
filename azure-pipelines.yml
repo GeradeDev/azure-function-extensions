@@ -1,0 +1,49 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: NuGetToolInstaller@1
+  displayName: 'Install NuGet'
+  enabled: true
+
+- task: UseDotNet@2
+  displayName: 'Set pipeline to use DotNet Core 3.1'
+  inputs:
+    version: '3.1.x'
+    includePreviewVersions: false
+  enabled: true
+
+- task: NuGetCommand@2
+  displayName: 'Restore NuGet packages for project'
+  inputs:
+    restoreSolution: 'src/RabbitMq.Trigger.Extension/RabbitMq.Trigger.Extension.csproj'
+  enabled: true
+
+- task: DotNetCoreCLI@2
+  displayName: 'Build project'
+  inputs:
+    command: 'build'
+    projects: 'src/RabbitMq.Trigger.Extension/RabbitMq.Trigger.Extension.csproj'
+    arguments: '-c Release'
+  enabled: true
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish build artifacts'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+  enabled: true
