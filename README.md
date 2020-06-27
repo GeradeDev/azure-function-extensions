@@ -4,10 +4,10 @@ This is a personal repo where I will be developing additional bindings/triggers 
 
 
 # Trigger for RabbitMq
-(https://www.nuget.org/packages/RabbitMq.Trigger.Extension)[RabbitMq.Trigger.Extension]     [![Build Status](https://geradedev.visualstudio.com/Azure%20Function%20Extensions/_apis/build/status/RabbitMq.Trigger.Extension%20Pipeline?branchName=master)](https://geradedev.visualstudio.com/Azure%20Function%20Extensions/_build/latest?definitionId=39&branchName=master)
+[https://www.nuget.org/packages/RabbitMq.Trigger.Extension](RabbitMq.Trigger.Extension)     [![Build Status](https://geradedev.visualstudio.com/Azure%20Function%20Extensions/_apis/build/status/RabbitMq.Trigger.Extension%20Pipeline?branchName=master)](https://geradedev.visualstudio.com/Azure%20Function%20Extensions/_build/latest?definitionId=39&branchName=master)
 
 ## Local Setup
-The easiest and fastest way to test is locally, so ensure you have the (https://hub.docker.com/_/rabbitmq)[RabbMq Docker] image up and running.
+The easiest and fastest way to test is locally, so ensure you have the [https://hub.docker.com/_/rabbitmq](RabbMq Docker) image up and running.
 ```
 $ docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3
 ```
