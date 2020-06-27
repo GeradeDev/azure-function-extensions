@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Gerade Geldenhuys</Authors>
+    <Description>A basic implementation of a trigger for RabbitMq to use in an Azure Function.</Description>
+    <PackageProjectUrl>https://github.com/GeradeDev/azure-function-extensions</PackageProjectUrl>
+    <PackageIcon>gerade-icon.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryUrl>https://github.com/GeradeDev/azure-function-extensions</RepositoryUrl>
+    <PackageLicenseFile>MIT.md</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.16" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Core" Version="3.0.16" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Desktop\gerade-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\MIT.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
