@@ -1,5 +1,5 @@
 # Trigger for RabbitMq
-[RabbitMq.Trigger.Extension](https://www.nuget.org/packages/RabbitMq.Trigger.Extension)     
+[![NuGet](https://img.shields.io/nuget/v/RabbitMq.Trigger.Extension)](https://www.nuget.org/packages/RabbitMq.Trigger.Extension)
 
 ## Local Setup
 The easiest and fastest way to test is locally, so ensure you have the [RabbMq Docker](https://hub.docker.com/_/rabbitmq) image up and running.
